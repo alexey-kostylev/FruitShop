@@ -22,7 +22,7 @@ Logic is implemented using dependency injection and interfaces.
 
 The key points:
 - Fruits are decoupled from pricing and order services.
-- To represent fruits with varing pricing strategies, the Strategy Pattern is used. To change a pricing model of a fruit, a storage needs to be updated. A model 'Fruit' represented in the systtem is designed to be aggregated model. Database models can be different and 1 to many relations binding can be used to link a fruit to multiple pricing strategies.
+- To represent fruits with varing pricing strategies, the Strategy Pattern is used. To change a pricing model of a fruit, a storage needs to be updated. A model 'Fruit' represented in the systtem is designed to be aggregated model. Database models can be different and 1 to many relation can be used to link a fruit to multiple pricing strategies.
 - Pricing and store services are decoupled from order service.
 - Validation is skipped for simplicity.
     
