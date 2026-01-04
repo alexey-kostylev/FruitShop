@@ -24,6 +24,7 @@ internal class OrderService(IStoreService storeService, IPricingService pricingS
     /// <exception cref="InvalidOperationException"></exception>
     public async Task<Order> PlaceOrder(OrderRequest request)
     {
+        // ConcurrentDictionary is used to prevent multiple pricing strategy instances for the same pricing mode
         ConcurrentDictionary<PricingMode, IPricingStrategy> pricingStrategies = new();
         var items = new List<OrderItem>();
         foreach (var item in request.Items)
